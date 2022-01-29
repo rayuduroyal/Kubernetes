@@ -13,3 +13,4 @@ spec:
       command: ['wget']
       args: ['{{ include "sample-helm.fullname" . }}:{{ .Values.service.port }}']
   restartPolicy: Never
+
