@@ -2,14 +2,16 @@
 apiVersion: v1
 kind: NameSpace
 metadata:
-  name: web
-  project: demo
+  name: web-ns
+  labels:
+    project: demo
 ---
 apiVersion: v1
 kind: NameSpace
 metadata:
-  name: consumer
-  project: demo
+  name: consumer-ns
+  labels:
+    project: demo
 ---
 apiVersion: v1
 kind: Pod
