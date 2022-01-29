@@ -1,0 +1,38 @@
+---
+apiVersion: v1
+kind: NameSpace
+metadata:
+  name: web
+  project: demo
+---
+apiVersion: v1
+kind: NameSpace
+metadata:
+  name: consumer
+  project: demo
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web-pod
+  namespace: we-ns
+  labels:
+    app: frontend
+    project: demo
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug-pod
+  namespace: consumer-ns
+spec:
+  containers:
+  - name: centos
+    image: centos:7
+    command:
+      - sleep
+      - "10000"
