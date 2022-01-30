@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
     - name: payment
-      image: 739561048503.dkr.ecr.us-east-1.amazonaws.com/payment:1.0.5
+      image: 260038077524.dkr.ecr.us-east-1.amazonaws.com/payment:1.0.5
 
 ---
 apiVersion: v1
