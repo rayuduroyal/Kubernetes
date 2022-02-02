@@ -33,13 +33,13 @@ daemonset:
         json.keys_under_root: true
         processors:
         - add_kubernetes_metadata:
-            host: ${NODE_NAME}
+            host: ${NODE_prodNAME}
             matchers:
             - logs_path:
                 logs_path: "/var/log/containers/"
 
       output.logstash:
-        hosts: '3.88.111.154:5044'
+        hosts: '54.173.12.103:5044'
   # Only used when updateStrategy is set to "RollingUpdate"
   maxUnavailable: 1
   nodeSelector: {}
